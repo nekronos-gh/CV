@@ -1,0 +1,28 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.lol
+*.nav
+*.snm
+*.bcf
+*.run.xml
+
+# Latexmk specific
+*.xdv
+*.dvi
+
+# Editors
+*.swp
+*.swo
+*~
+
