@@ -19,6 +19,7 @@
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
+\usepackage{datetime}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -53,7 +54,7 @@
 % \photo{./examples/profile.png}
 \name{Eduardo}{Rodríguez Sánchez}
 \position{Computer Engineer{\enskip\cdotp\enskip}HPC Master Stundent}
-\address{Francisco Ribera 3, 28918, Leganés, Madrid, Spain}
+\address{Francisco Ribera 3, 28918, Madrid, Spain}
 
 \mobile{(+34) 611 457 191}
 \email{edubuntu2002@gmail.com}
@@ -88,7 +89,7 @@
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
-  {\today}
+  {\monthname[\the\month] \the\year}
   {Eduardo R. S.~~~·~~~Curriculum Vitae}
   {\thepage}
 
