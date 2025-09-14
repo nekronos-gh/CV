@@ -1,1 +1,1 @@
-[Curriculum Vitae PDF](main.pdf)
+[Curriculum Vitae PDF](cv.pdf)
