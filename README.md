@@ -1,1 +1,1 @@
-[Curriculum Vitae PDF](cv.pdf)
+![](./imgs/page1.jpg)
