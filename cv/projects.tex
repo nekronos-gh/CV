@@ -1,0 +1,40 @@
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Projects}
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+  %---------------------------------------------------------
+  \cventry
+    {\href{https://github.com/nekronos-gh/rule110}{github.com/nekronos-gh/rule110}}
+    {Rule110 Fast}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {Optimized Rule 110 simulation using AVX2 SIMD intrinsics.} 
+        \item {Maximised memory throughput via memory alignment and OpenMP multi-threading.}
+        \item {Utilized hardware directives and C++23 features for efficient state analysis.}
+      \end{cvitems}
+    }
+
+  %---------------------------------------------------------
+
+  \cventry
+    {\href{https://github.com/nekronos-gh/TinyFile}{github.com/nekronos-gh/TinyFile}}
+    {TinyFile}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {Developed a file compression service using a hybrid IPC architecture combining POSIX Message Queues control signals and Shared Memory for data transfer.}
+        \item {Engineered a state-machine based Ring Buffer to manage concurrent data chunks, utilizing zero-copy memory access between the client library and daemon service.}
+      \end{cvitems}
+    }
+
+\end{cventries}
