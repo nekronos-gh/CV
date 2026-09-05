@@ -1,3 +1,9 @@
+# Build output (see Makefile, `make release` refreshes the tracked root PDFs)
+build/
+
+# Misc
+nohup.out
+
 # LaTeX intermediate files
 *.aux
 *.bbl

@@ -1,0 +1,161 @@
+%!TEX TS-program = xelatex
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% One-page condensed version of cv.tex — same Awesome-CV template, trimmed content.
+% Compile with: xelatex cv-onepage.tex
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{cv}
+\usepackage{datetime}
+
+% Tighter margins to fit one page
+\geometry{left=1.2cm, top=0.6cm, right=1.2cm, bottom=1.2cm, footskip=.48cm}
+
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% Reduce vertical spacing vs. default template
+\renewcommand{\acvHeaderAfterSocialSkip}{2.5mm}
+\renewcommand{\acvSectionTopSkip}{2mm}
+\renewcommand{\acvSectionContentTopSkip}{1.5mm}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Eduardo}{Rodríguez Sánchez}
+\position{Computer Engineer{\enskip\cdotp\enskip}HPC Master Student}
+\address{Madrid, Spain}
+
+\email{rod.san.eduardo@gmail.com}
+\github{nekronos-gh}
+\linkedin{eduardo-rodriguez-sanchez}
+\homepage{https://erodriguez.dev/}
+% Quote removed to save space on one-page version
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader
+\makecvfooter
+  {\monthname[\the\month] \the\year}
+  {Eduardo R. S.~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+%	EDUCATION
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+\begin{cventries}
+  \cventry
+  {M.S. in High Performance Computing --- EUMaster4HPC double degree} % Degree
+  {Univ. of Luxembourg / Sofia Univ. St. Kliment Ohridski} % Institution
+  {Belval / Sofia} % Location
+  {Sep. 2025 - Present} % Date(s)
+  {
+    \begin{cvitems}
+      \item {Focus: parallel algorithms, HPC system architecture, accelerator programming, and performance analysis. \\ GPA: 17.5/20.}
+    \end{cvitems}
+  }
+
+  \cventry
+  {B.S. in Computer Engineering (exchange year: Georgia Tech)} % Degree
+  {UC3M / Georgia Institute of Technology} % Institution
+  {Madrid / Georgia, USA} % Location
+  {Sep. 2020 - Jun. 2024} % Date(s)
+  {
+    \begin{cvitems}
+      \item {Coursework: Operating Systems, Networks, Distributed Systems, Machine Learning, Cryptography. \\ GPA: 9.1/10 (UC3M) $\cdot$ 4.0/4.0 (Georgia Tech). \\ Thesis: C++ load-balancing proxy sustaining 86\,Gb/s of trace forwarding across millions of concurrent connections.}
+    \end{cvitems}
+  }
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	SKILLS
+%-------------------------------------------------------------------------------
+\cvsection{Skills}
+\begin{cvskills}
+  \cvskill
+    {Programming}
+    {C, C++, Python}
+  \cvskill
+    {HPC / Systems}
+    {OpenMP, MPI, AVX2, Multithreading, Profiling, Linux, GDB, Valgrind}
+  \cvskill
+    {Distributed / Cloud}
+    {Kubernetes, Spark, 5G Networking, gRPC, Prometheus, Grafana}
+  \cvskill
+    {Languages}
+    {Spanish (native), English (fluent)}
+\end{cvskills}
+
+%-------------------------------------------------------------------------------
+%	EXPERIENCE
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
+\begin{cventries}
+  \cventry
+    {Software Developer} % Job title
+    {Ericsson} % Organization
+    {Madrid, Spain} % Location
+    {Dec. 2024 - Aug. 2025} % Date(s)
+    {
+      \begin{cvitems}
+        \item {Shipped User Plane Analytics features and antenna geo-redundancy for the 5G Core, and cut multi-threaded lock contention to resolve critical production issues.}
+        \item {Led the migration of the 5G RIB codebase to the Madrid site and redesigned intra-forwarding-module communication to run entirely inside Kubernetes, eliminating external network hops.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Software Engineer} % Job title
+    {Samsung Electronics (Zhilabs)} % Organization
+    {Madrid, Spain} % Location
+    {Jun. 2023 - Oct. 2024} % Date(s)
+    {
+      \begin{cvitems}
+        \item {Built a network trace proxy sustaining 86\,Gb/s with a recursive-descent binary parser for trace analysis, and parallelized a multi-antenna traffic simulator to speed up testing.}
+        \item {Designed a RAN Assistant, a proof-of-concept multi-agent LLM/NLP/ML system for telecom Q\&A, anomaly detection, and automated root-cause analysis.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	RESEARCH
+%-------------------------------------------------------------------------------
+\cvsection{Research}
+\begin{cventries}
+  \cventry
+    {Research Assistant}
+    {SnT (Security, Reliability and Trust)}
+    {Luxembourg}
+    {Oct. 2025 - Apr. 2026}
+    {
+      \begin{cvitems}
+        \item {Prototyped a Byzantine fault-tolerant PBFT consensus engine in C++ on an async networking stack, including a cross-replica-group coordination protocol.}
+        \item {Built failure-injection scenarios and reproducible benchmarking tooling to validate consensus performance under adversarial conditions.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	PROJECTS
+%-------------------------------------------------------------------------------
+\cvsection{Projects}
+\begin{cventries}
+  \cventry
+    {\href{https://github.com/nekronos-gh/rule110}{github.com/nekronos-gh/rule110}}
+    {Rule110 Fast}{}{}{Cellular-automaton simulator vectorized with AVX2 and parallelized with OpenMP, using aligned memory in modern C++23.}
+
+  \cventry
+    {\href{https://github.com/nekronos-gh/TinyFile}{github.com/nekronos-gh/TinyFile} }
+    {TinyFile}{}{}{Zero-copy file-compression service built on POSIX message queues and shared memory, driven by a ring-buffer state machine.}
+
+  \cventry
+    {\href{https://github.com/nekronos-gh/pbft-cpp}{github.com/nekronos-gh/pbft-cpp} }
+    {PBFT}{}{}{Full 3-phase consensus implementation in C++ (Salticidae) with view changes and checkpointing, instrumented via Prometheus/Grafana.}
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\end{document}
